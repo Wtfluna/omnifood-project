@@ -93,6 +93,18 @@ body {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
+  /* At first, we put the margin-bottom everywhere */
+  /* margin-bottom: 9.6rem; */
+}
+
+/* Then, we exclude the last child of the grid */
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+/*Finally, we apply the margin-bottom when it's not the last child */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -234,6 +246,7 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+  /*!important overwrite other setting*/
 }
 
 .margin-bottom-md {
