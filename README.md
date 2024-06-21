@@ -9,8 +9,6 @@ Omnifood is an AI-powered food subscription service that will make you eat healt
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -36,3 +34,7 @@ To set up this project locally, follow these steps:
    ```sh
    git clone https://github.com/Wtfluna/omnifood-project
    ```
+
+## Usage
+
+Open the index.html file in your web browser to view the website.
