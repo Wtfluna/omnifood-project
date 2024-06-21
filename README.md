@@ -37,4 +37,5 @@ To set up this project locally, follow these steps:
 
 ## Usage
 
-Open the index.html file in your web browser to view the website.
+Open the index.html file in your web browser to view the website, or click on this link :
+https://wtfluna.github.io/omnifood-project/

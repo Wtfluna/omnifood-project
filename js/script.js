@@ -1,9 +1,9 @@
-console.log("Hello world");
+console.log("Hello world!");
 
-// const myName = "Adeline Merle";
-// const h1 = document.querySelector(".heading-primary");
-// console.log(myName);
-// console.log(h1);
+const myName = "Jonas Schmedtmann";
+const h1 = document.querySelector(".heading-primary");
+console.log(myName);
+console.log(h1);
 
 // h1.addEventListener("click", function () {
 //   h1.textContent = myName;
@@ -12,18 +12,19 @@ console.log("Hello world");
 // });
 
 ///////////////////////////////////////////////////////////
-// Set current year//
+// Set current year
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
 ///////////////////////////////////////////////////////////
-//Make mobile navigation work //
+// Make mobile navigation work
+
 const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEL = document.querySelector(".header");
+const headerEl = document.querySelector(".header");
 
 btnNavEl.addEventListener("click", function () {
-  headerEL.classList.toggle("nav-open");
+  headerEl.classList.toggle("nav-open");
 });
 
 ///////////////////////////////////////////////////////////
@@ -49,7 +50,7 @@ allLinks.forEach(function (link) {
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
 
-    // Close mobile navigation
+    // Close mobile naviagtion
     if (link.classList.contains("main-nav-link"))
       headerEl.classList.toggle("nav-open");
   });
@@ -57,6 +58,7 @@ allLinks.forEach(function (link) {
 
 ///////////////////////////////////////////////////////////
 // Sticky navigation
+
 const sectionHeroEl = document.querySelector(".section-hero");
 
 const obs = new IntersectionObserver(
@@ -64,19 +66,21 @@ const obs = new IntersectionObserver(
     const ent = entries[0];
     console.log(ent);
 
-    if (!ent.isIntersecting) {
+    if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
-    } else {
+    }
+
+    if (ent.isIntersecting === true) {
       document.body.classList.remove("sticky");
     }
   },
   {
+    // In the viewport
     root: null,
     threshold: 0,
     rootMargin: "-80px",
   }
 );
-
 obs.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
